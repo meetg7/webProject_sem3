@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Output</title>
+ <link rel="stylesheet" href="../stylesheets/result-style.css">
+ <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+  
+  h1 {
+  font-size: 2em;
+  text-align: center;
+  }
+  
+  p {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  }
+  
+  table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  }
+  
+  th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  }
+  
+  th {
+  background-color: #ccc;
+  }
+  
+  tr:nth-child(even) {
+  background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+  background-color: #ddd;
+  }
+ </style>
+</head>
+<body>
+    <h1>Data Output</h1>
+    <p>Page: {{page}}</p>
+    <p>Per Page: {{perPage}}</p>
+    <p>Depth: {{depth}}</p>
+
+    <h1>Data</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Record</th>
+          <th>Vessel Terms</th>
+          <th>Feature Type</th>
+          <th>Chart</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>GP Quality</th>
+          <th>Depth</th>
+          <th>Sounding Type</th>
+          <th>History</th>
+          <th>Quasou</th>
+          <th>Watlev</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+          <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.recrd}}</td>
+            <td>{{this.vesslterms}}</td>
+            <td>{{this.feature_type}}</td>
+            <td>{{this.chart}}</td>
+            <td>{{this.latdec}}</td>
+            <td>{{this.londec}}</td>
+            <td>{{this.gp_quality}}</td>
+            <td>{{this.depth}}</td>
+            <td>{{this.sounding_type}}</td>
+            <td>{{this.history}}</td>
+            <td>{{this.quasou}}</td>
+            <td>{{this.watlev}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>

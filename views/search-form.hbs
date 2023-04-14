@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search</title>
+    <link rel="stylesheet" href="../stylesheets/form.css">
+    <style>
+      /* Set background color and font for the page */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    }
+    
+    /* Style the heading */
+    h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+    }
+    
+    /* Style the form */
+    form {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    background-color: #fff;
+    }
+    
+    /* Style the form label */
+    label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    }
+    
+    /* Style the form input */
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    }
+    
+    /* Style the form button */
+    button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    }
+    
+    button[type="submit"]:hover {
+    background-color: #555;
+    }
+    
+    /* Style form fieldset */
+    div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    div:last-of-type {
+    margin-bottom: 0;
+    }
+    
+    /* Style form fieldset border */
+    fieldset {
+    border: none;
+    }
+    
+    /* Style form fieldset legend */
+    legend {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+  <h1>Search</h1>
+  <form method="post" action="/search">
+    <div>
+      <label for="page">Page:</label>
+      <input type="text" name="page" required>
+    </div>
+    <div>
+      <label for="perPage">Per Page:</label>
+      <input type="text" name="perPage" required>
+    </div>
+    <div>
+      <label for="depth">Depth:</label>
+      <input type="text" name="depth" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
