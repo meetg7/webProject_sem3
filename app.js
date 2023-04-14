@@ -39,6 +39,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send("<h1>"+ process.env.WELCOME_STRING + "</h1>");
+});
+
+
 app.get('/search', (req, res) => {
   res.render('search-form');
 });
